@@ -1,0 +1,109 @@
+.container {
+  height: 500px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  padding: 0;
+
+  .arrowPrev {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    left: 2%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 30px;
+    color: var(--neutralDark);
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    z-index: 1;
+  }
+
+  .arrowNext {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    left: 98%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 30px;
+    color: var(--neutralDark);
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    z-index: 1;
+  }
+
+  .containerContent {
+    transition: transform 0.5s ease-out;
+    width: 100%;
+    /* Asegúrate de que esto toma el 100% del ancho del carrusel */
+    height: 100%;
+    /* Asegúrate de que esto toma el 100% de la altura del carrusel */
+    position: absolute;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+
+      h2 {
+        font-size: 32px;
+        color: #b5b5b5;
+        text-align: left;
+        font-family: Arial;
+        position: absolute;
+        max-width: 40%;
+        left: 10%;
+        top: 25%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .containerButtons {
+    width: 100%;
+    position: absolute;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    bottom: 35%;
+    left: -33%;
+
+    .button {
+      max-width: 6rem;
+      width: 2rem;
+      margin: 0.2rem;
+      border: none;
+      border-radius: 2rem;
+      background-color: #b5b5b5;
+      padding: 0.4rem;
+      transition: all ease .5s;
+      cursor: pointer;
+    }
+
+    .active {
+      width: 4rem;
+      background-color: #004E9B;
+    }
+  }
+}
